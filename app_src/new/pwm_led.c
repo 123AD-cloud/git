@@ -1560,22 +1560,22 @@ void LedEffect5()
         // ========== 点亮 LED_DATA_3（原始位置） ==========
         for(uint8_t i = start_pos; i < end_pos; i++)
         {
-            uint8_t green_val = 255 * userVar.brightness / 100;
+            uint8_t red_val = 255 * userVar.brightness / 100;
 
-            // 纯绿色：R=0, G=255, B=0
-            LED_DATA_3[i * 3 + 0] = 0;
-            LED_DATA_3[i * 3 + 1] = green_val;
+            // fixed red: R=255, G=0, B=0
+            LED_DATA_3[i * 3 + 0] = red_val;
+            LED_DATA_3[i * 3 + 1] = 0;
             LED_DATA_3[i * 3 + 2] = 0;
         }
 
         // ========== 3. 点亮 LED_DATA_2（偏移+1，更高一位） ==========
         for(uint8_t i = start_pos_led2; i < end_pos_led2; i++)
         {
-            uint8_t green_val = 255 * userVar.brightness / 100;
+            uint8_t red_val = 255 * userVar.brightness / 100;
 
-            // 纯绿色：R=0, G=255, B=0
-            LED_DATA_2[i * 3 + 0] = 0;
-            LED_DATA_2[i * 3 + 1] = green_val;
+            // fixed red: R=255, G=0, B=0
+            LED_DATA_2[i * 3 + 0] = red_val;
+            LED_DATA_2[i * 3 + 1] = 0;
             LED_DATA_2[i * 3 + 2] = 0;
         }
 
