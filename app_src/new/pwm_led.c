@@ -738,6 +738,13 @@ static uint8_t peak_hold_value_led1_2 = 0;   // LED_DATA_2�ķ�ֵ
 static uint8_t peak_decay_timer_led1_3 = 0;  // LED_DATA_3��˥����ʱ��
 static uint8_t peak_decay_timer_led1_2 = 0;  // LED_DATA_2��˥����ʱ��
 
+static uint8_t peak_target_led2_3 = 0;      // LED_DATA_3 peak target
+static uint8_t peak_pos_led2_3 = 0;         // LED_DATA_3 peak display position
+static uint8_t peak_hold_timer_led2_3 = 0;  // LED_DATA_3 peak hold timer
+static uint8_t peak_target_led2_2 = 0;      // LED_DATA_2 peak target
+static uint8_t peak_pos_led2_2 = 0;         // LED_DATA_2 peak display position
+static uint8_t peak_hold_timer_led2_2 = 0;  // LED_DATA_2 peak hold timer
+
 void LedEffect1()
 {
     if (led_exchange_flag)
@@ -952,20 +959,24 @@ void LedEffect2()
         color_start_index     = 0;
 
 
-        peak_hold_value_led1_3 = 0;
-        peak_decay_timer_led1_3 = 0;
+        peak_target_led2_3 = 0;
+        peak_pos_led2_3 = 0;
+        peak_hold_timer_led2_3 = 0;
+        peak_target_led2_2 = 0;
+        peak_pos_led2_2 = 0;
+        peak_hold_timer_led2_2 = 0;
 
         TimeOutSet(&led_switch_timer, 0);
         TimeOutSet(&led_switch_timer1, 0);
 
-        DBG("--------LedEffect1--------\n");
+        DBG("--------LedEffect2--------\n");
     }
 
     if (IsTimeOut(&led_switch_timer))
     {
         ClearLedDataAll();
 
-        // LED3 = ��������
+        // LED3 = music channel
         uint8_t volume_level_led3 = 0;
         if(userVar.if_music_play)
         {
@@ -979,7 +990,7 @@ void LedEffect2()
             volume_level_led3 = 0;
         }
 
-        // LED2 = ��˷�����
+        // LED2 = mic channel
         uint8_t volume_level_led2 = 0;
         if(userVar.if_music_play)
         {
@@ -993,24 +1004,23 @@ void LedEffect2()
             volume_level_led2 = 0;
         }
 
-        // ��������������ʹ��
         volume_level_led1 = volume_level_led3;
 
-        // ====================== LED_DATA_3 �̶���ɫ���� ======================
+        // ====================== LED_DATA_3 bar fill ======================
         for(uint8_t i = 0; i < volume_level_led3; i++)
         {
             uint8_t r_val = 0, g_val = 0, b_val = 0;
 
-            if(i <= 34)        // 1~35 �� ��ɫ
+            if(i <= 34)
             {
                 g_val = 255 * userVar.brightness / 100;
             }
-            else if(i <= 44)   // 36~45 �� ��ɫ
+            else if(i <= 44)
             {
                 r_val = 255 * userVar.brightness / 100;
                 g_val = 255 * userVar.brightness / 100;
             }
-            else               // 46~48 �� ��ɫ
+            else
             {
                 r_val = 255 * userVar.brightness / 100;
             }
@@ -1020,7 +1030,7 @@ void LedEffect2()
             LED_DATA_3[i * 3 + 2] = b_val;
         }
 
-        // ====================== LED_DATA_2 �̶���ɫ���� ======================
+        // ====================== LED_DATA_2 bar fill ======================
         for(uint8_t i = 0; i < volume_level_led2; i++)
         {
             uint8_t r_val = 0, g_val = 0, b_val = 0;
@@ -1044,93 +1054,67 @@ void LedEffect2()
             LED_DATA_2[i * 3 + 2] = b_val;
         }
 
-        //LED3��ֵ
-        if(volume_level_led3 > peak_hold_value_led1_3)
+        // ====================== LED3 peak rise ======================
+        if(volume_level_led3 > peak_target_led2_3)
         {
-            peak_hold_value_led1_3 = volume_level_led3;
-            peak_decay_timer_led1_3 = 2;
+            peak_target_led2_3 = volume_level_led3;
+            peak_hold_timer_led2_3 = 4;
         }
 
-        if(peak_decay_timer_led1_3 > 0)
+        if(peak_pos_led2_3 < peak_target_led2_3)
         {
-            peak_decay_timer_led1_3--;
-            if(peak_decay_timer_led1_3 == 0 && peak_hold_value_led1_3 > 0)
-            {
-                peak_hold_value_led1_3--;
-                peak_decay_timer_led1_3 = 2;
-            }
+            peak_pos_led2_3++;
+        }
+        else if(peak_hold_timer_led2_3 > 0)
+        {
+            peak_hold_timer_led2_3--;
+        }
+        else
+        {
+            if(peak_target_led2_3 > 0) peak_target_led2_3--;
+            if(peak_pos_led2_3 > 0) peak_pos_led2_3--;
         }
 
-        // ====================== LED2 ��ֵ ======================
-               if(volume_level_led2 > peak_hold_value_led1_2)
-               {
-                   peak_hold_value_led1_2 = volume_level_led2;
-                   peak_decay_timer_led1_2 = 2;
-               }
-
-               if(peak_decay_timer_led1_2 > 0)
-               {
-                   peak_decay_timer_led1_2--;
-                   if(peak_decay_timer_led1_2 == 0 && peak_hold_value_led1_2 > 0)
-                   {
-                       peak_hold_value_led1_2--;
-                       peak_decay_timer_led1_2 = 2;
-                   }
-               }
-
-        // ====================== ��ֵ��ɫ��λ�ñ仯 ======================
-        if(peak_hold_value_led1_3 > 0 && peak_hold_value_led1_3 <= 48)
+        // ====================== LED2 peak rise ======================
+        if(volume_level_led2 > peak_target_led2_2)
         {
-            uint8_t peak_idx = peak_hold_value_led1_3 - 1;
-            uint8_t r_val = 0, g_val = 0, b_val = 0;
-
-
-            if(peak_idx <= 34)       // ��ɫ��
-            {
-                g_val = 255 * userVar.brightness / 100;
-            }
-            else if(peak_idx <= 44)  // ��ɫ��
-            {
-                r_val = 255 * userVar.brightness / 100;
-                g_val = 255 * userVar.brightness / 100;
-            }
-            else                     // ��ɫ��
-            {
-                r_val = 255 * userVar.brightness / 100;
-            }
-
-            LED_DATA_3[peak_idx * 3 + 0] = r_val;
-            LED_DATA_3[peak_idx * 3 + 1] = g_val;
-            LED_DATA_3[peak_idx * 3 + 2] = b_val;
+            peak_target_led2_2 = volume_level_led2;
+            peak_hold_timer_led2_2 = 4;
         }
 
-        if(peak_hold_value_led1_2 > 0 && peak_hold_value_led1_2 <= 48)
-                {
-                    uint8_t peak_idx = peak_hold_value_led1_2 - 1;
-                    uint8_t r_val = 0, g_val = 0, b_val = 0;
+        if(peak_pos_led2_2 < peak_target_led2_2)
+        {
+            peak_pos_led2_2++;
+        }
+        else if(peak_hold_timer_led2_2 > 0)
+        {
+            peak_hold_timer_led2_2--;
+        }
+        else
+        {
+            if(peak_target_led2_2 > 0) peak_target_led2_2--;
+            if(peak_pos_led2_2 > 0) peak_pos_led2_2--;
+        }
 
+        // ====================== LED3 peak dot display ======================
+        if(peak_pos_led2_3 > 0 && peak_pos_led2_3 <= 48)
+        {
+            uint8_t peak_idx = peak_pos_led2_3 - 1;
+            LED_DATA_3[peak_idx * 3 + 0] = 255 * userVar.brightness / 100;
+            LED_DATA_3[peak_idx * 3 + 1] = 255 * userVar.brightness / 100;
+            LED_DATA_3[peak_idx * 3 + 2] = 255 * userVar.brightness / 100;
+        }
 
-                    if(peak_idx <= 34)       // ��ɫ��
-                    {
-                        g_val = 255 * userVar.brightness / 100;
-                    }
-                    else if(peak_idx <= 44)  // ��ɫ��
-                    {
-                        r_val = 255 * userVar.brightness / 100;
-                        g_val = 255 * userVar.brightness / 100;
-                    }
-                    else                     // ��ɫ��
-                    {
-                        r_val = 255 * userVar.brightness / 100;
-                    }
+        // ====================== LED2 peak dot display ======================
+        if(peak_pos_led2_2 > 0 && peak_pos_led2_2 <= 48)
+        {
+            uint8_t peak_idx = peak_pos_led2_2 - 1;
+            LED_DATA_2[peak_idx * 3 + 0] = 255 * userVar.brightness / 100;
+            LED_DATA_2[peak_idx * 3 + 1] = 255 * userVar.brightness / 100;
+            LED_DATA_2[peak_idx * 3 + 2] = 255 * userVar.brightness / 100;
+        }
 
-                    LED_DATA_2[peak_idx * 3 + 0] = r_val;
-                    LED_DATA_2[peak_idx * 3 + 1] = g_val;
-                    LED_DATA_2[peak_idx * 3 + 2] = b_val;
-                }
-
-
-        // ========== ���ּ��� ==========
+        // ========== accelerate ==========
         if(userVar.if_music_play)
         {
             if(!if_accelerate_led1 && IsTimeOut(&led_switch_timer1))
@@ -1174,15 +1158,10 @@ void LedEffect2()
             accelerate_counter_led1 = 0;
             TimeOutSet(&led_switch_timer, LED_CONTRAL_TIME8);
 
-            // ====================== û����ʱ��ֵ�������� ======================
-            if(peak_hold_value_led1_3 > 0)
+            if(peak_pos_led2_3 > 0)
             {
-                peak_decay_timer_led1_3--;
-                if(peak_decay_timer_led1_3 == 0)
-                {
-                    peak_hold_value_led1_3--;
-                    peak_decay_timer_led1_3 = 2;
-                }
+                if(peak_target_led2_3 > 0) peak_target_led2_3--;
+                if(peak_pos_led2_3 > 0) peak_pos_led2_3--;
             }
         }
 
