@@ -18,34 +18,34 @@
 
 #ifdef CFG_PWM_LED_EN
 
-/**********LED²ÎÊýÉèÖÃ********************************/
+/**********LEDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½********************************/
 
 #if (SYS_CORE_DPLL_FREQ == 240*1000)
 
-#define LED_T		150		//200		//LEDµÆÖéµ¥¸öbitÎ»ÖÜÆÚ£¨¶î¶¨Îª1.25us£©T=LED_T/120000000,ÏµÍ³Ê±ÖÓÎª120M
-#define RE			0		//RESÐÅºÅÕ¼¿Õ±ÈÎª0
-#define HT			100		//128  		//Âß¼­bitÎª1µÄÕ¼¿Õ±È
-#define LT			50		//64	  	//Âß¼­bitÎª0µÄÕ¼¿Õ±È
+#define LED_T		150		//200		//LEDï¿½ï¿½ï¿½éµ¥ï¿½ï¿½bitÎ»ï¿½ï¿½ï¿½Ú£ï¿½ï¿½î¶¨Îª1.25usï¿½ï¿½T=LED_T/120000000,ÏµÍ³Ê±ï¿½ï¿½Îª120M
+#define RE			0		//RESï¿½Åºï¿½Õ¼ï¿½Õ±ï¿½Îª0
+#define HT			100		//128  		//ï¿½ß¼ï¿½bitÎª1ï¿½ï¿½Õ¼ï¿½Õ±ï¿½
+#define LT			50		//64	  	//ï¿½ß¼ï¿½bitÎª0ï¿½ï¿½Õ¼ï¿½Õ±ï¿½
 
 #elif (SYS_CORE_DPLL_FREQ == 288*1000)
 
-#define LED_T		180		//200		//LEDµÆÖéµ¥¸öbitÎ»ÖÜÆÚ£¨¶î¶¨Îª1.25us£©T=LED_T/120000000,ÏµÍ³Ê±ÖÓÎª120M
-#define RE			0		//RESÐÅºÅÕ¼¿Õ±ÈÎª0
-#define HT			120		//128  		//Âß¼­bitÎª1µÄÕ¼¿Õ±È
-#define LT			60		//64	  	//Âß¼­bitÎª0µÄÕ¼¿Õ±È
+#define LED_T		180		//200		//LEDï¿½ï¿½ï¿½éµ¥ï¿½ï¿½bitÎ»ï¿½ï¿½ï¿½Ú£ï¿½ï¿½î¶¨Îª1.25usï¿½ï¿½T=LED_T/120000000,ÏµÍ³Ê±ï¿½ï¿½Îª120M
+#define RE			0		//RESï¿½Åºï¿½Õ¼ï¿½Õ±ï¿½Îª0
+#define HT			120		//128  		//ï¿½ß¼ï¿½bitÎª1ï¿½ï¿½Õ¼ï¿½Õ±ï¿½
+#define LT			60		//64	  	//ï¿½ß¼ï¿½bitÎª0ï¿½ï¿½Õ¼ï¿½Õ±ï¿½
 
 #elif (SYS_CORE_DPLL_FREQ == 360*1000)
 
-#define LED_T		225		//200		//LEDµÆÖéµ¥¸öbitÎ»ÖÜÆÚ£¨¶î¶¨Îª1.25us£©T=LED_T/120000000,ÏµÍ³Ê±ÖÓÎª120M
-#define RE			0		//RESÐÅºÅÕ¼¿Õ±ÈÎª0
-#define HT			150		//128  		//Âß¼­bitÎª1µÄÕ¼¿Õ±È
-#define LT			75		//64	  	//Âß¼­bitÎª0µÄÕ¼¿Õ±È
+#define LED_T		225		//200		//LEDï¿½ï¿½ï¿½éµ¥ï¿½ï¿½bitÎ»ï¿½ï¿½ï¿½Ú£ï¿½ï¿½î¶¨Îª1.25usï¿½ï¿½T=LED_T/120000000,ÏµÍ³Ê±ï¿½ï¿½Îª120M
+#define RE			0		//RESï¿½Åºï¿½Õ¼ï¿½Õ±ï¿½Îª0
+#define HT			150		//128  		//ï¿½ß¼ï¿½bitÎª1ï¿½ï¿½Õ¼ï¿½Õ±ï¿½
+#define LT			75		//64	  	//ï¿½ß¼ï¿½bitÎª0ï¿½ï¿½Õ¼ï¿½Õ±ï¿½
 
 #endif
 
 
 #ifdef PWM7_LED
-#define BUF_LEN		LED_NUM*3*8+50	//Ë¢µÆÌõÊý¾ÝµÄ³¤¶È£¬¼ÓµÄ50ÎªÇ°48¸öÒÔ¼°×îºó2¸öÊý¾ÝÎª0£¬ÓÃÓÚÄ£ÄâRESÐÅºÅ
+#define BUF_LEN		LED_NUM*3*8+50	//Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ³ï¿½ï¿½È£ï¿½ï¿½Óµï¿½50ÎªÇ°48ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½RESï¿½Åºï¿½
 static uint8_t LED_DATA_1[LED_NUM * 3]	= {0x00};
 static uint8_t LedBufA[BUF_LEN] 		= {0x0};
 static uint8_t LedBufB[BUF_LEN] 		= {0x0};
@@ -54,7 +54,7 @@ static uint8_t LED_DATA_1[LED_NUM * 3]		= {0x00};
 #endif
 
 #ifdef PWM6_LED
-#define BUF_LEN1	LED_NUM1*3*8+50	//Ë¢µÆÌõÊý¾ÝµÄ³¤¶È£¬¼ÓµÄ50ÎªÇ°48¸öÒÔ¼°×îºó2¸öÊý¾ÝÎª0£¬ÓÃÓÚÄ£ÄâRESÐÅºÅ
+#define BUF_LEN1	LED_NUM1*3*8+50	//Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ³ï¿½ï¿½È£ï¿½ï¿½Óµï¿½50ÎªÇ°48ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½RESï¿½Åºï¿½
 static uint8_t LED_DATA_2[LED_NUM1 * 3]	= {0x00};
 static uint8_t LedBufC[BUF_LEN1] 		= {0x0};
 static uint8_t LedBufD[BUF_LEN1] 		= {0x0};
@@ -63,7 +63,7 @@ static uint8_t LED_DATA_2[LED_NUM1 * 3]		= {0x00};
 #endif
 
 #ifdef PWM5_LED
-#define BUF_LEN2	LED_NUM2*3*8+50	//Ë¢µÆÌõÊý¾ÝµÄ³¤¶È£¬¼ÓµÄ50ÎªÇ°48¸öÒÔ¼°×îºó2¸öÊý¾ÝÎª0£¬ÓÃÓÚÄ£ÄâRESÐÅºÅ
+#define BUF_LEN2	LED_NUM2*3*8+50	//Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ³ï¿½ï¿½È£ï¿½ï¿½Óµï¿½50ÎªÇ°48ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½RESï¿½Åºï¿½
 static uint8_t LED_DATA_3[LED_NUM2 * 3]	= {0x00};
 static uint8_t LedBufE[BUF_LEN2] 		= {0x00};
 static uint8_t LedBufF[BUF_LEN2] 		= {0x00};
@@ -72,7 +72,7 @@ static uint8_t LED_DATA_3[LED_NUM2 * 3]		= {0x00};
 #endif
 
 #ifdef PWM8_LED
-#define BUF_LEN3	LED_NUM3*3*8+320	//Ë¢µÆÌõÊý¾ÝµÄ³¤¶È£¬¼ÓµÄ50ÎªÇ°48¸öÒÔ¼°×îºó2¸öÊý¾ÝÎª0£¬ÓÃÓÚÄ£ÄâRESÐÅºÅ
+#define BUF_LEN3	LED_NUM3*3*8+320	//Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ³ï¿½ï¿½È£ï¿½ï¿½Óµï¿½50ÎªÇ°48ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½RESï¿½Åºï¿½
 static uint8_t LED_DATA_4[LED_NUM3 * 3]	= {0x00};
 static uint8_t LedBufG[BUF_LEN3] 		= {0x00};
 static uint8_t LedBufH[BUF_LEN3] 		= {0x00};
@@ -85,12 +85,12 @@ static void pwm6_led_ctrl(uint8_t *data_led);
 static void pwm5_led_ctrl(uint8_t *data_led);
 static void pwm8_led_ctrl(uint8_t *data_led);	
 
-//ÐÞ¸Ä
-// ÐÂÔöÁ½¸ö¾²Ì¬±äÁ¿£¨ÐèÒªÔÚÎÄ¼þ¿ªÍ·»òº¯ÊýÄÚ¶¨ÒåÎªstatic£©
-//static int direction = 1;      // Á÷Ë®·½Ïò£º1=ÕýÏò£¬-1=·´Ïò
-//static int flow_count = 0;     // Á÷Ë®´ÎÊý¼ÆÊý
+//ï¿½Þ¸ï¿½
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Îªstaticï¿½ï¿½
+//static int direction = 1;      // ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½1=ï¿½ï¿½ï¿½ï¿½-1=ï¿½ï¿½ï¿½ï¿½
+//static int flow_count = 0;     // ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-// »òÕßÔÚº¯ÊýÍâ¶¨ÒåÈ«¾Ö±äÁ¿
+// ï¿½ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½â¶¨ï¿½ï¿½È«ï¿½Ö±ï¿½ï¿½ï¿½
 // int direction = 1;
 // int flow_count = 0;
 
@@ -98,7 +98,7 @@ static void pwm8_led_ctrl(uint8_t *data_led);
 TIMER 	delay_led_on_timer;
 TIMER 	delay_led_on_timer1;
 
-//ÔÚ led_param_init ÓÐ³õÊ¼»¯
+//ï¿½ï¿½ led_param_init ï¿½Ð³ï¿½Ê¼ï¿½ï¿½
 TIMER 	led_switch_timer;
 TIMER 	led_switch_timer1;
 TIMER 	led_switch_timer2;
@@ -112,16 +112,16 @@ bool led_exchange_flag1 = FALSE;
 bool led_exchange_flag2 = FALSE;
 bool led_exchange_flag3 = FALSE;
 
-bool 	if_add = FALSE;   //µÆ¹ÜÁÁ¶È¿ØÖÆ
-bool 	if_add1 = FALSE;   //µÆ¹ÜÁÁ¶È¿ØÖÆ
+bool 	if_add = FALSE;   //ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½È¿ï¿½ï¿½ï¿½
+bool 	if_add1 = FALSE;   //ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½È¿ï¿½ï¿½ï¿½
 
 bool 	if_sub = FALSE;
 
 uint8_t if_accelerate = FALSE;
 
-uint8_t light_persent = 1;  //µÆ¹âÁÁ¶È
+uint8_t light_persent = 1;  //ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½
 
-uint8_t light_persent_base = 30;  //µÆ¹âÁÁ¶È
+uint8_t light_persent_base = 30;  //ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½
 
 uint16_t color_start_index = 0;
 uint16_t color_start_index1 = 0;
@@ -271,15 +271,15 @@ void led_param_init(void)
 	led_exchange_flag1 = TRUE;
 	led_exchange_flag2 = TRUE;
 	
-	if_add = FALSE;   //µÆ¹ÜÁÁ¶È¿ØÖÆ
+	if_add = FALSE;   //ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½È¿ï¿½ï¿½ï¿½
 	if_add1 = FALSE;
 	
 	if_sub = FALSE;
 	if_accelerate = FALSE;
 	
-	light_persent = 1;	//µÆ¹âÁÁ¶È
+	light_persent = 1;	//ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½
 	
-	light_persent_base = 30;  //µÆ¹âÁÁ¶È
+	light_persent_base = 30;  //ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 	color_start_index = 0;
 	color_start_index1 = 0;
@@ -493,10 +493,10 @@ void LedEffectLedBrightness(uint8_t brightness)
 		ClearLedDataAll();
 		if_refresh_led_data = 0xFF;
 
-		// ¸ù¾ÝÁÁ¶ÈÖµ¼ÆËãLED_DATA_3ÒªµãÁÁµÄLEDÊýÁ¿
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½LED_DATA_3Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½LEDï¿½ï¿½ï¿½ï¿½
 		switch (brightness)
 		{
-		case 0 ... 20:     // ×îµÍÁÁ¶È
+		case 0 ... 20:     // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			color_contral_param_other1 = 10;
 			break;
 
@@ -512,33 +512,33 @@ void LedEffectLedBrightness(uint8_t brightness)
 			color_contral_param_other1 = 38;
 			break;
 
-		case 81 ... 100:   // ×î¸ßÁÁ¶È
+		case 81 ... 100:   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			color_contral_param_other1 = 48;
 			break;
 		}
 
-		// LED_DATA_3 È«ÁÁ£¨×ó²à48¸öµÆÖé£©
+		// LED_DATA_3 È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½48ï¿½ï¿½ï¿½ï¿½ï¿½é£©
 		for(uint8_t i = 0; i < 48; i++)
 		{
 		    uint8_t r = 0, g = 0, b = 0;
 
 		    if (i < 16)
 		    {
-		        // ºì ¡ú ÂÌ (0-15)
+		        // ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ (0-15)
 		        r = 255 - (i * 16);
 		        g = i * 16;
 		        b = 0;
 		    }
 		    else if (i < 32)
 		    {
-		        // ÂÌ ¡ú À¶ (16-31)
+		        // ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ (16-31)
 		        r = 0;
 		        g = 255 - ((i - 16) * 16);
 		        b = (i - 16) * 16;
 		    }
 		    else
 		    {
-		        // À¶ ¡ú ºì (32-47)
+		        // ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ (32-47)
 		        r = (i - 32) * 16;
 		        g = 0;
 		        b = 255 - ((i - 32) * 16);
@@ -550,10 +550,10 @@ void LedEffectLedBrightness(uint8_t brightness)
 		}
 
 
-		// ========== LED_DATA_2 ¸ù¾ÝÁÁ¶ÈµµÎ»µãÁÁ¶ÔÓ¦ÊýÁ¿µÄµÆÖé ===========
+		// ========== LED_DATA_2 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ ===========
 		if(brightness == 100)
 		{
-		    // Ö±½Ó¸´ÖÆ LED_DATA_3 µÄÑÕÉ«µ½ LED_DATA_2
+		    // Ö±ï¿½Ó¸ï¿½ï¿½ï¿½ LED_DATA_3 ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ LED_DATA_2
 		    for(uint8_t i = 0; i < color_contral_param_other1; i++)
 		    {
 		        LED_DATA_2[i*3 + 0] = LED_DATA_3[i*3 + 0];
@@ -564,8 +564,8 @@ void LedEffectLedBrightness(uint8_t brightness)
 
 		else if(brightness == 0)
 		{
-			// ÁÁ¶È0%Ê±£ºLED_DATA_2È«²¿Ï¨Ãð£¨µ«LED_DATA_3±£³ÖÈ«ÁÁ£©
-			// ²»ÐèÒª¶îÍâ²Ù×÷£¬ÒòÎªClearLedDataAllÒÑ¾­Çå¿Õ
+			// ï¿½ï¿½ï¿½ï¿½0%Ê±ï¿½ï¿½LED_DATA_2È«ï¿½ï¿½Ï¨ï¿½ð£¨µï¿½LED_DATA_3ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½
+			// ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªClearLedDataAllï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½
 		}
 		else
 		{
@@ -603,8 +603,8 @@ void LedEffectLedBrightness(uint8_t brightness)
 }
 void LedEffectPowerOn()
 {
-    static uint8_t flow_phase = 0;      // 0:µãÁÁ½×¶Î, 1:Ï¨Ãð½×¶Î
-    static uint8_t led_index = 0;       // µ±Ç°²Ù×÷µÄLEDË÷Òý
+    static uint8_t flow_phase = 0;      // 0:ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½, 1:Ï¨ï¿½ï¿½×¶ï¿½
+    static uint8_t led_index = 0;       // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½LEDï¿½ï¿½ï¿½ï¿½
 
     if (led_exchange_flag)
     {
@@ -614,8 +614,8 @@ void LedEffectPowerOn()
         color_contral_param   = -1;
         color_contral_tmp     = 0;
         light_persent         = 0;
-        flow_phase = 0;              // µãÁÁ½×¶Î
-        led_index = 0;               // ´ÓµÚ0¿Å¿ªÊ¼
+        flow_phase = 0;              // ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½
+        led_index = 0;               // ï¿½Óµï¿½0ï¿½Å¿ï¿½Ê¼
         TimeOutSet(&led_switch_timer, 0);
 
         DBG("--------LedEffectPowerOn--------\n");
@@ -623,11 +623,11 @@ void LedEffectPowerOn()
 
     if (IsTimeOut(&led_switch_timer))
     {
-        if(flow_phase == 0)  // µãÁÁ½×¶Î
+        if(flow_phase == 0)  // ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½
         {
             if(led_index < LED_NUM2)
             {
-                // µãÁÁµ±Ç°LED
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°LED
                 color_contral_tmp = led_index * 1530 / LED_NUM2;
 
                 LED_DATA_3[led_index * 3 + 0] = grb[color_contral_tmp * 3 + 0] * userVar.brightness / 100;
@@ -641,18 +641,18 @@ void LedEffectPowerOn()
             }
             else
             {
-                // ËùÓÐLED¶¼ÒÑµãÁÁ£¬ÇÐ»»µ½Ï¨Ãð½×¶Î
+                // ï¿½ï¿½ï¿½ï¿½LEDï¿½ï¿½ï¿½Ñµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ï¨ï¿½ï¿½×¶ï¿½
                 flow_phase = 1;
                 led_index = 0;
                 TimeOutSet(&led_switch_timer, 15);
                 return;
             }
         }
-        else  // Ï¨Ãð½×¶Î
+        else  // Ï¨ï¿½ï¿½×¶ï¿½
         {
             if(led_index < LED_NUM2)
             {
-                // Ï¨Ãðµ±Ç°LED
+                // Ï¨ï¿½ï¿½Ç°LED
                 LED_DATA_3[led_index * 3 + 0] = 0;
                 LED_DATA_3[led_index * 3 + 1] = 0;
                 LED_DATA_3[led_index * 3 + 2] = 0;
@@ -664,7 +664,7 @@ void LedEffectPowerOn()
             }
             else
             {
-                // ËùÓÐLED¶¼ÒÑÏ¨Ãð£¬½áÊøÌØÐ§
+                // ï¿½ï¿½ï¿½ï¿½LEDï¿½ï¿½ï¿½ï¿½Ï¨ï¿½ð£¬½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
                 LedEffectSwitch(userVar.led_mode_bak, TRUE, TRUE);
                 TimeOutSet(&led_switch_timer, LED_CONTRAL_TIME10);
                 return;
@@ -720,23 +720,23 @@ void LedEffectPowerOff()
 }
 
 /**
- * LEDµçÆ½±íÐ§¹û - Ä£Ê½Ò»£¨´øÒôÁ¿¿ØÖÆºÍÒôÀÖ¼ÓËÙ£©
- * Ð§¹û£ºÂÌÉ«(µÍÒôÁ¿) -> »ÆÉ«(ÖÐÒôÁ¿) -> ºìÉ«(¸ßÒôÁ¿) ½¥±ä
- * ÒôÁ¿Ô½´ó£¬µãÁÁµÄµÆÖéÊýÁ¿Ô½¶à
- * ÒôÀÖ²¥·ÅÊ±£¬¶¯»­ËÙ¶È»áËæÒôÁ¿±ä»¯¶ø¼Ó¿ì
+ * LEDï¿½ï¿½Æ½ï¿½ï¿½Ð§ï¿½ï¿½ - Ä£Ê½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æºï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½Ù£ï¿½
+ * Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) -> ï¿½ï¿½É«(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) -> ï¿½ï¿½É«(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ó£¬µï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»¯ï¿½ï¿½ï¿½Ó¿ï¿½
  */
 
-// ·åÖµ±£³ÖºÍÒôÀÖ¼ÓËÙÏà¹Ø¾²Ì¬±äÁ¿
-static uint8_t peak_hold_value_led1 = 0;      // µ±Ç°·åÖµ±£³ÖµÄµçÆ½Öµ
-static uint8_t peak_decay_timer_led1 = 0;     // ·åÖµË¥¼õ¶¨Ê±Æ÷
-static uint8_t if_accelerate_led1 = FALSE;    // ÒôÀÖ¼ÓËÙ±êÖ¾
-static uint8_t accelerate_counter_led1 = 0;   // ¼ÓËÙ¼ÆÊýÆ÷
-static uint8_t volume_level_led1 = 0;         // µ±Ç°ÒôÁ¿µçÆ½Öµ
+// ï¿½ï¿½Öµï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
+static uint8_t peak_hold_value_led1 = 0;      // ï¿½ï¿½Ç°ï¿½ï¿½Öµï¿½ï¿½ï¿½ÖµÄµï¿½Æ½Öµ
+static uint8_t peak_decay_timer_led1 = 0;     // ï¿½ï¿½ÖµË¥ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+static uint8_t if_accelerate_led1 = FALSE;    // ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½Ù±ï¿½Ö¾
+static uint8_t accelerate_counter_led1 = 0;   // ï¿½ï¿½ï¿½Ù¼ï¿½ï¿½ï¿½ï¿½ï¿½
+static uint8_t volume_level_led1 = 0;         // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½Öµ
 
-static uint8_t peak_hold_value_led1_3 = 0;   // LED_DATA_3µÄ·åÖµ
-static uint8_t peak_hold_value_led1_2 = 0;   // LED_DATA_2µÄ·åÖµ
-static uint8_t peak_decay_timer_led1_3 = 0;  // LED_DATA_3µÄË¥¼õ¶¨Ê±Æ÷
-static uint8_t peak_decay_timer_led1_2 = 0;  // LED_DATA_2µÄË¥¼õ¶¨Ê±Æ÷
+static uint8_t peak_hold_value_led1_3 = 0;   // LED_DATA_3ï¿½Ä·ï¿½Öµ
+static uint8_t peak_hold_value_led1_2 = 0;   // LED_DATA_2ï¿½Ä·ï¿½Öµ
+static uint8_t peak_decay_timer_led1_3 = 0;  // LED_DATA_3ï¿½ï¿½Ë¥ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+static uint8_t peak_decay_timer_led1_2 = 0;  // LED_DATA_2ï¿½ï¿½Ë¥ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
 void LedEffect1()
 {
@@ -751,6 +751,11 @@ void LedEffect1()
         light_persent         = 0;
         color_start_index     = 0;
 
+        peak_hold_value_led1_3 = 0;
+        peak_hold_value_led1_2 = 0;
+        peak_decay_timer_led1_3 = 0;
+        peak_decay_timer_led1_2 = 0;
+
         TimeOutSet(&led_switch_timer, 0);
         TimeOutSet(&led_switch_timer1, 0);
 
@@ -761,7 +766,7 @@ void LedEffect1()
     {
         ClearLedDataAll();
 
-        // LED3 = ÒôÀÖÒôÁ¿
+        // LED3 = ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         uint8_t volume_level_led3 = 0;
         if(userVar.if_music_play)
         {
@@ -775,7 +780,7 @@ void LedEffect1()
             volume_level_led3 = 0;
         }
 
-        // LED2 = Âó¿Ë·çÒôÁ¿
+        // LED2 = ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½
         uint8_t volume_level_led2 = 0;
         if(userVar.if_music_play)
         {
@@ -789,10 +794,10 @@ void LedEffect1()
             volume_level_led2 = 0;
         }
 
-        // ±£´æÒôÁ¿¹©¼ÓËÙÊ¹ÓÃ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
         volume_level_led1 = volume_level_led3;
 
-        // ====================== LED_DATA_3 ¹Ì¶¨ÑÕÉ«ÁÁµÆ ======================
+        // ====================== LED_DATA_3 ï¿½Ì¶ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ ======================
         for(uint8_t i = 0; i < volume_level_led3; i++)
         {
             uint8_t r_val = 0, g_val = 0, b_val = 0;
@@ -806,7 +811,7 @@ void LedEffect1()
             LED_DATA_3[i * 3 + 2] = b_val;
         }
 
-        // ====================== LED_DATA_2 ¹Ì¶¨ÑÕÉ«ÁÁµÆ ======================
+        // ====================== LED_DATA_2 ï¿½Ì¶ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ ======================
         for(uint8_t i = 0; i < volume_level_led2; i++)
         {
             uint8_t r_val = 0, g_val = 0, b_val = 0;
@@ -820,7 +825,62 @@ void LedEffect1()
             LED_DATA_2[i * 3 + 2] = b_val;
         }
 
-        // ========== ÒôÀÖ¼ÓËÙ ==========
+        // ====================== LED_DATA_3 peak hold ======================
+        if(volume_level_led3 > peak_hold_value_led1_3)
+        {
+            peak_hold_value_led1_3 = volume_level_led3;
+            peak_decay_timer_led1_3 = 2;
+        }
+
+        if(peak_decay_timer_led1_3 > 0)
+        {
+            peak_decay_timer_led1_3--;
+            if(peak_decay_timer_led1_3 == 0 && peak_hold_value_led1_3 > 0)
+            {
+                peak_hold_value_led1_3--;
+                peak_decay_timer_led1_3 = 2;
+            }
+        }
+
+        // ====================== LED_DATA_2 peak hold ======================
+        if(volume_level_led2 > peak_hold_value_led1_2)
+        {
+            peak_hold_value_led1_2 = volume_level_led2;
+            peak_decay_timer_led1_2 = 2;
+        }
+
+        if(peak_decay_timer_led1_2 > 0)
+        {
+            peak_decay_timer_led1_2--;
+            if(peak_decay_timer_led1_2 == 0 && peak_hold_value_led1_2 > 0)
+            {
+                peak_hold_value_led1_2--;
+                peak_decay_timer_led1_2 = 2;
+            }
+        }
+
+        // ====================== peak dot display ======================
+        if(peak_hold_value_led1_3 > 0 && peak_hold_value_led1_3 <= 48)
+        {
+            uint8_t peak_idx = peak_hold_value_led1_3 - 1;
+            uint8_t bright_val = 255 * userVar.brightness / 100;
+
+            LED_DATA_3[peak_idx * 3 + 0] = bright_val;
+            LED_DATA_3[peak_idx * 3 + 1] = bright_val;
+            LED_DATA_3[peak_idx * 3 + 2] = bright_val;
+        }
+
+        if(peak_hold_value_led1_2 > 0 && peak_hold_value_led1_2 <= 48)
+        {
+            uint8_t peak_idx = peak_hold_value_led1_2 - 1;
+            uint8_t bright_val = 255 * userVar.brightness / 100;
+
+            LED_DATA_2[peak_idx * 3 + 0] = bright_val;
+            LED_DATA_2[peak_idx * 3 + 1] = bright_val;
+            LED_DATA_2[peak_idx * 3 + 2] = bright_val;
+        }
+
+        // ========== ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ ==========
         if(userVar.if_music_play)
         {
             if(!if_accelerate_led1 && IsTimeOut(&led_switch_timer1))
@@ -868,13 +928,13 @@ void LedEffect1()
         if_refresh_led_data = 0xFF;
     }
 }
-// ·åÖµ±£³ÖÏà¹Ø¾²Ì¬±äÁ¿
-static uint8_t peak_hold_value_led2 = 0;   // LED_DATA_2µ±Ç°·åÖµ±£³ÖµÄµçÆ½Öµ
-static uint8_t peak_hold_value_led3 = 0;   // LED_DATA_3µ±Ç°·åÖµ±£³ÖµÄµçÆ½Öµ
-static uint8_t peak_decay_timer = 0;       // ·åÖµË¥¼õ¶¨Ê±Æ÷
-static uint8_t if_accelerate_led2 = FALSE;    // ÒôÀÖ¼ÓËÙ±êÖ¾
-static uint8_t accelerate_counter_led2 = 0;   // ¼ÓËÙ¼ÆÊýÆ÷
-static uint8_t volume_strength_value = 0;     // ÒôÁ¿Ç¿¶ÈÖµ
+// ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
+static uint8_t peak_hold_value_led2 = 0;   // LED_DATA_2ï¿½ï¿½Ç°ï¿½ï¿½Öµï¿½ï¿½ï¿½ÖµÄµï¿½Æ½Öµ
+static uint8_t peak_hold_value_led3 = 0;   // LED_DATA_3ï¿½ï¿½Ç°ï¿½ï¿½Öµï¿½ï¿½ï¿½ÖµÄµï¿½Æ½Öµ
+static uint8_t peak_decay_timer = 0;       // ï¿½ï¿½ÖµË¥ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+static uint8_t if_accelerate_led2 = FALSE;    // ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½Ù±ï¿½Ö¾
+static uint8_t accelerate_counter_led2 = 0;   // ï¿½ï¿½ï¿½Ù¼ï¿½ï¿½ï¿½ï¿½ï¿½
+static uint8_t volume_strength_value = 0;     // ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½Öµ
 
 
 
@@ -905,7 +965,7 @@ void LedEffect2()
     {
         ClearLedDataAll();
 
-        // LED3 = ÒôÀÖÒôÁ¿
+        // LED3 = ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         uint8_t volume_level_led3 = 0;
         if(userVar.if_music_play)
         {
@@ -919,7 +979,7 @@ void LedEffect2()
             volume_level_led3 = 0;
         }
 
-        // LED2 = Âó¿Ë·çÒôÁ¿
+        // LED2 = ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½
         uint8_t volume_level_led2 = 0;
         if(userVar.if_music_play)
         {
@@ -933,24 +993,24 @@ void LedEffect2()
             volume_level_led2 = 0;
         }
 
-        // ±£´æÒôÁ¿¹©¼ÓËÙÊ¹ÓÃ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
         volume_level_led1 = volume_level_led3;
 
-        // ====================== LED_DATA_3 ¹Ì¶¨ÑÕÉ«ÁÁµÆ ======================
+        // ====================== LED_DATA_3 ï¿½Ì¶ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ ======================
         for(uint8_t i = 0; i < volume_level_led3; i++)
         {
             uint8_t r_val = 0, g_val = 0, b_val = 0;
 
-            if(i <= 34)        // 1~35 ¡ú ÂÌÉ«
+            if(i <= 34)        // 1~35 ï¿½ï¿½ ï¿½ï¿½É«
             {
                 g_val = 255 * userVar.brightness / 100;
             }
-            else if(i <= 44)   // 36~45 ¡ú »ÆÉ«
+            else if(i <= 44)   // 36~45 ï¿½ï¿½ ï¿½ï¿½É«
             {
                 r_val = 255 * userVar.brightness / 100;
                 g_val = 255 * userVar.brightness / 100;
             }
-            else               // 46~48 ¡ú ºìÉ«
+            else               // 46~48 ï¿½ï¿½ ï¿½ï¿½É«
             {
                 r_val = 255 * userVar.brightness / 100;
             }
@@ -960,7 +1020,7 @@ void LedEffect2()
             LED_DATA_3[i * 3 + 2] = b_val;
         }
 
-        // ====================== LED_DATA_2 ¹Ì¶¨ÑÕÉ«ÁÁµÆ ======================
+        // ====================== LED_DATA_2 ï¿½Ì¶ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ ======================
         for(uint8_t i = 0; i < volume_level_led2; i++)
         {
             uint8_t r_val = 0, g_val = 0, b_val = 0;
@@ -984,7 +1044,7 @@ void LedEffect2()
             LED_DATA_2[i * 3 + 2] = b_val;
         }
 
-        //LED3·åÖµ
+        //LED3ï¿½ï¿½Öµ
         if(volume_level_led3 > peak_hold_value_led1_3)
         {
             peak_hold_value_led1_3 = volume_level_led3;
@@ -1001,7 +1061,7 @@ void LedEffect2()
             }
         }
 
-        // ====================== LED2 ·åÖµ ======================
+        // ====================== LED2 ï¿½ï¿½Öµ ======================
                if(volume_level_led2 > peak_hold_value_led1_2)
                {
                    peak_hold_value_led1_2 = volume_level_led2;
@@ -1018,23 +1078,23 @@ void LedEffect2()
                    }
                }
 
-        // ====================== ·åÖµÑÕÉ«ËæÎ»ÖÃ±ä»¯ ======================
+        // ====================== ï¿½ï¿½Öµï¿½ï¿½É«ï¿½ï¿½Î»ï¿½Ã±ä»¯ ======================
         if(peak_hold_value_led1_3 > 0 && peak_hold_value_led1_3 <= 48)
         {
             uint8_t peak_idx = peak_hold_value_led1_3 - 1;
             uint8_t r_val = 0, g_val = 0, b_val = 0;
 
 
-            if(peak_idx <= 34)       // ÂÌÉ«¶Î
+            if(peak_idx <= 34)       // ï¿½ï¿½É«ï¿½ï¿½
             {
                 g_val = 255 * userVar.brightness / 100;
             }
-            else if(peak_idx <= 44)  // »ÆÉ«¶Î
+            else if(peak_idx <= 44)  // ï¿½ï¿½É«ï¿½ï¿½
             {
                 r_val = 255 * userVar.brightness / 100;
                 g_val = 255 * userVar.brightness / 100;
             }
-            else                     // ºìÉ«¶Î
+            else                     // ï¿½ï¿½É«ï¿½ï¿½
             {
                 r_val = 255 * userVar.brightness / 100;
             }
@@ -1050,16 +1110,16 @@ void LedEffect2()
                     uint8_t r_val = 0, g_val = 0, b_val = 0;
 
 
-                    if(peak_idx <= 34)       // ÂÌÉ«¶Î
+                    if(peak_idx <= 34)       // ï¿½ï¿½É«ï¿½ï¿½
                     {
                         g_val = 255 * userVar.brightness / 100;
                     }
-                    else if(peak_idx <= 44)  // »ÆÉ«¶Î
+                    else if(peak_idx <= 44)  // ï¿½ï¿½É«ï¿½ï¿½
                     {
                         r_val = 255 * userVar.brightness / 100;
                         g_val = 255 * userVar.brightness / 100;
                     }
-                    else                     // ºìÉ«¶Î
+                    else                     // ï¿½ï¿½É«ï¿½ï¿½
                     {
                         r_val = 255 * userVar.brightness / 100;
                     }
@@ -1070,7 +1130,7 @@ void LedEffect2()
                 }
 
 
-        // ========== ÒôÀÖ¼ÓËÙ ==========
+        // ========== ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ ==========
         if(userVar.if_music_play)
         {
             if(!if_accelerate_led1 && IsTimeOut(&led_switch_timer1))
@@ -1114,7 +1174,7 @@ void LedEffect2()
             accelerate_counter_led1 = 0;
             TimeOutSet(&led_switch_timer, LED_CONTRAL_TIME8);
 
-            // ====================== Ã»ÒôÀÖÊ±·åÖµÂýÂý¹éÁã ======================
+            // ====================== Ã»ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ======================
             if(peak_hold_value_led1_3 > 0)
             {
                 peak_decay_timer_led1_3--;
@@ -1147,7 +1207,7 @@ void LedEffect3()
         color_contral_param6 = 0;
         color_contral_param7 = 0;
 
-        // ÒôÀÖ¼ÓËÙ±äÁ¿³õÊ¼»¯
+        // ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½Ù±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
         if_accelerate_led2 = FALSE;
         accelerate_counter_led2 = 0;
         volume_strength_value = 0;
@@ -1162,7 +1222,7 @@ void LedEffect3()
     {
         ClearLedDataAll();
 
-        // ========== 1. LED3 Ê¹ÓÃ£ºÒôÀÖÒôÁ¿ ======================
+        // ========== 1. LED3 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ======================
         uint8_t volume_level_music = 0;
         if(userVar.if_music_play)
         {
@@ -1176,11 +1236,11 @@ void LedEffect3()
             volume_level_music = 0;
         }
 
-        // ========== 2. LED2 Ê¹ÓÃ£ºÂó¿Ë·çÒôÁ¿£¨ºÍÒôÀÖ²»Ò»Ñù£©======================
+        // ========== 2. LED2 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½Ò»ï¿½ï¿½ï¿½ï¿½======================
         uint8_t volume_level_mic = 0;
         if(userVar.if_music_play)
         {
-            uint16_t volume = LedAudioLevelGet(MIC_VOL_TYPE); // ÕâÀï¸Ä³É MIC
+            uint16_t volume = LedAudioLevelGet(MIC_VOL_TYPE); // ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ MIC
             if(volume > 48) volume = 48;
             if(volume < 0) volume = 0;
             volume_level_mic = volume;
@@ -1190,7 +1250,7 @@ void LedEffect3()
             volume_level_mic = 0;
         }
 
-        // ========== µãÁÁ LED_DATA_3£¨ÒôÀÖÒôÁ¿£©==========
+        // ========== ï¿½ï¿½ï¿½ï¿½ LED_DATA_3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½==========
         for(uint8_t i = 0; i < volume_level_music; i++)
         {
             uint8_t red_val = 255 * userVar.brightness / 100;
@@ -1199,7 +1259,7 @@ void LedEffect3()
             LED_DATA_3[i * 3 + 2] = 0;
         }
 
-        // ========== µãÁÁ LED_DATA_2£¨Âó¿Ë·çÒôÁ¿£¬²»Í¬²½£©==========
+        // ========== ï¿½ï¿½ï¿½ï¿½ LED_DATA_2ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½==========
         for(uint8_t i = 0; i < volume_level_mic; i++)
         {
             uint8_t red_val = 255 * userVar.brightness / 100;
@@ -1208,13 +1268,13 @@ void LedEffect3()
             LED_DATA_2[i * 3 + 2] = 0;
         }
 
-        // ========== ÒôÀÖ¼ÓËÙÂß¼­
+        // ========== ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
         if(userVar.if_music_play)
         {
-            // ¼ÓËÙ´¥·¢Âß¼­
+            // ï¿½ï¿½ï¿½Ù´ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
             if(!if_accelerate_led2 && IsTimeOut(&led_switch_timer1))
             {
-                // ¸ù¾ÝÒôÁ¿Ç¿¶È¼ÆËã¼ÓËÙ²ÎÊý
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½Ù²ï¿½ï¿½ï¿½
                 volume_strength_value = GetLedSwitchTime1(2) / 2;
 
                 if(volume_strength_value == 0)
@@ -1234,7 +1294,7 @@ void LedEffect3()
                 TimeOutSet(&led_switch_timer1, ((70 - volume_strength_value * 20) * accelerate_counter_led2 + 500));
             }
 
-            // ¼ÓËÙÖ´ÐÐÂß¼­
+            // ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ß¼ï¿½
             if(if_accelerate_led2)
             {
                 if(accelerate_counter_led2 > 0)
@@ -1246,7 +1306,7 @@ void LedEffect3()
                     if_accelerate_led2 = FALSE;
                 }
 
-                // ÒôÁ¿Ô½´ó£¬Ë¢ÐÂ¼ä¸ôÔ½¶Ì£¨¶¯»­¸üÁ÷³©£©
+                // ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ë¢ï¿½Â¼ï¿½ï¿½Ô½ï¿½Ì£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 uint8_t refresh_speed = 70 - volume_strength_value * 10;
                 if(refresh_speed < LED_CONTRAL_TIME4)
                 {
@@ -1256,13 +1316,13 @@ void LedEffect3()
             }
             else
             {
-                // Õý³£Ë¢ÐÂÄ£Ê½
+                // ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½Ä£Ê½
                 TimeOutSet(&led_switch_timer, LED_CONTRAL_TIME4);
             }
         }
         else
         {
-            // ÎÞÒôÀÖÊ±£¬ÖØÖÃ¼ÓËÙ±êÖ¾
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½Ù±ï¿½Ö¾
             if_accelerate_led2 = FALSE;
             accelerate_counter_led2 = 0;
             volume_strength_value = 0;
@@ -1291,12 +1351,12 @@ void LedEffect4()
         color_contral_param6 = 0;
         color_contral_param7 = 0;
 
-        // ·åÖµ±£³Ö±äÁ¿³õÊ¼»¯
+        // ï¿½ï¿½Öµï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
         peak_hold_value_led2 = 0;
         peak_hold_value_led3 = 0;
         peak_decay_timer = 0;
 
-        // ÒôÀÖ¼ÓËÙ±äÁ¿³õÊ¼»¯
+        // ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½Ù±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
         if_accelerate_led2 = FALSE;
         accelerate_counter_led2 = 0;
         volume_strength_value = 0;
@@ -1311,7 +1371,7 @@ void LedEffect4()
     {
         ClearLedDataAll();
 
-        // LED3 Ê¹ÓÃ£ºÒôÀÖÒôÁ¿ MUSIC
+        // LED3 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ MUSIC
         uint8_t volume_level_led3 = 0;
         if(userVar.if_music_play)
         {
@@ -1325,7 +1385,7 @@ void LedEffect4()
             volume_level_led3 = 0;
         }
 
-        // LED2 Ê¹ÓÃ£ºÂó¿Ë·çÒôÁ¿ MIC£¨ºÍÒôÀÖ²»Ò»Ñù£©
+        // LED2 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ MICï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½Ò»ï¿½ï¿½ï¿½ï¿½
         uint8_t volume_level_led2 = 0;
         if(userVar.if_music_play)
         {
@@ -1339,11 +1399,11 @@ void LedEffect4()
             volume_level_led2 = 0;
         }
 
-        // ====================== ÑÕÉ«½¥±äÁ÷¶¯±äÁ¿ ======================
+        // ====================== ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ======================
         static uint8_t color_flow = 0;
-        color_flow += 2;  // ½¥±äËÙ¶È
+        color_flow += 2;  // ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
 
-        // ========== 2. µãÁÁ LED_DATA_3£¨Ê¹ÓÃ¶ÀÁ¢ÒôÁ¿£©==========
+        // ========== 2. ï¿½ï¿½ï¿½ï¿½ LED_DATA_3ï¿½ï¿½Ê¹ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½==========
         for(uint8_t i = 0; i < volume_level_led3; i++)
         {
             LED_DATA_3[i * 3 + 0] =255 * userVar.brightness / 100;
@@ -1351,7 +1411,7 @@ void LedEffect4()
             LED_DATA_3[i * 3 + 2] = 0;
         }
 
-        // ========== 3. µãÁÁ LED_DATA_2£¨Ê¹ÓÃ¶ÀÁ¢ÒôÁ¿£©==========
+        // ========== 3. ï¿½ï¿½ï¿½ï¿½ LED_DATA_2ï¿½ï¿½Ê¹ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½==========
         for(uint8_t i = 0; i < volume_level_led2; i++)
         {
             LED_DATA_2[i * 3 + 0] = 255 * userVar.brightness / 100;
@@ -1359,7 +1419,7 @@ void LedEffect4()
             LED_DATA_2[i * 3 + 2] = 0;
         }
 
-        // ====================== LED3 ·åÖµÂß¼­£¨Ê¹ÓÃ¶ÀÁ¢ÒôÁ¿£©======================
+        // ====================== LED3 ï¿½ï¿½Öµï¿½ß¼ï¿½ï¿½ï¿½Ê¹ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½======================
         if(volume_level_led3 > peak_hold_value_led1_3)
         {
             peak_hold_value_led1_3 = volume_level_led3;
@@ -1376,7 +1436,7 @@ void LedEffect4()
             }
         }
 
-        // ====================== LED2 ·åÖµÂß¼­£¨Ê¹ÓÃ¶ÀÁ¢ÒôÁ¿£©======================
+        // ====================== LED2 ï¿½ï¿½Öµï¿½ß¼ï¿½ï¿½ï¿½Ê¹ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½======================
         if(volume_level_led2 > peak_hold_value_led1_2)
         {
             peak_hold_value_led1_2 = volume_level_led2;
@@ -1393,7 +1453,7 @@ void LedEffect4()
             }
         }
 
-        // ====================== ·åÖµ ¡ú ½¥±äÉ« ======================
+        // ====================== ï¿½ï¿½Öµ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½É« ======================
         uint8_t r=0,g=0,b=0;
         uint8_t color = color_flow;
         if(color < 85)
@@ -1420,7 +1480,7 @@ void LedEffect4()
         g = g * userVar.brightness / 100;
         b = b * userVar.brightness / 100;
 
-        // ========== ·åÖµµãÏÔÊ¾£¨½¥±äÉ«£© ==========
+        // ========== ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ ==========
         if(peak_hold_value_led1_3 > 0 && peak_hold_value_led1_3 <= 48)
         {
             uint8_t peak_idx = peak_hold_value_led1_3 - 1;
@@ -1437,13 +1497,13 @@ void LedEffect4()
             LED_DATA_2[peak_idx * 3 + 2] = b;
         }
 
-        // ========== ÒôÀÖ¼ÓËÙÂß¼­ ==========
+        // ========== ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ ==========
         if(userVar.if_music_play)
         {
-            // ¼ÓËÙ´¥·¢Âß¼­
+            // ï¿½ï¿½ï¿½Ù´ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
             if(!if_accelerate_led2 && IsTimeOut(&led_switch_timer1))
             {
-                // ¸ù¾ÝÒôÁ¿Ç¿¶È¼ÆËã¼ÓËÙ²ÎÊý
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½Ù²ï¿½ï¿½ï¿½
                 volume_strength_value = GetLedSwitchTime1(2) / 2;
 
                 if(volume_strength_value == 0)
@@ -1463,7 +1523,7 @@ void LedEffect4()
                 TimeOutSet(&led_switch_timer1, ((70 - volume_strength_value * 20) * accelerate_counter_led2 + 500));
             }
 
-            // ¼ÓËÙÖ´ÐÐÂß¼­
+            // ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ß¼ï¿½
             if(if_accelerate_led2)
             {
                 if(accelerate_counter_led2 > 0)
@@ -1506,7 +1566,7 @@ void LedEffect5()
         color_contral_param6 = 0;
         color_contral_param7 = 0;
 
-        // ÒôÀÖ¼ÓËÙ±äÁ¿³õÊ¼»¯
+        // ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½Ù±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
         if_accelerate_led2 = FALSE;
         accelerate_counter_led2 = 0;
         volume_strength_value = 0;
@@ -1521,7 +1581,7 @@ void LedEffect5()
     {
         ClearLedDataAll();
 
-        // LED3 Ê¹ÓÃ£ºÒôÀÖÒôÁ¿ MUSIC
+        // LED3 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ MUSIC
         uint8_t volume_level_led3 = 0;
         if(userVar.if_music_play)
         {
@@ -1535,7 +1595,7 @@ void LedEffect5()
             volume_level_led3 = 0;
         }
 
-        // LED2 Ê¹ÓÃ£ºÂó¿Ë·çÒôÁ¿ MIC
+        // LED2 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ MIC
         uint8_t volume_level_led2 = 0;
         if(userVar.if_music_play)
         {
@@ -1549,19 +1609,19 @@ void LedEffect5()
             volume_level_led2 = 0;
         }
 
-        // ¹Ì¶¨µãÁÁ 2 ¸ñµÆÖé
+        // ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½ï¿½ 2 ï¿½ï¿½ï¿½ï¿½ï¿½
         int16_t light_len = 2;
         int16_t end_pos = volume_level_led3;
         int16_t start_pos = end_pos - light_len;
         if(start_pos < 0) start_pos = 0;
 
-        // LED2 Ê¹ÓÃ×Ô¼ºµÄÒôÁ¿£¨¶ÀÁ¢²»Í¬²½£©
+        // LED2 Ê¹ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½
         int16_t end_pos_led2 = volume_level_led2 + 1;
         int16_t start_pos_led2 = (volume_level_led2 - light_len) + 1;
         if(end_pos_led2 > 48) end_pos_led2 = 48;
         if(start_pos_led2 < 0) start_pos_led2 = 0;
 
-        // ========== µãÁÁ LED_DATA_3£¨Ô­Ê¼Î»ÖÃ£© ==========
+        // ========== ï¿½ï¿½ï¿½ï¿½ LED_DATA_3ï¿½ï¿½Ô­Ê¼Î»ï¿½Ã£ï¿½ ==========
         for(uint8_t i = start_pos; i < end_pos; i++)
         {
             uint8_t red_val = 255 * userVar.brightness / 100;
@@ -1572,7 +1632,7 @@ void LedEffect5()
             LED_DATA_3[i * 3 + 2] = 0;
         }
 
-        // ========== 3. µãÁÁ LED_DATA_2£¨Æ«ÒÆ+1£¬¸ü¸ßÒ»Î»£© ==========
+        // ========== 3. ï¿½ï¿½ï¿½ï¿½ LED_DATA_2ï¿½ï¿½Æ«ï¿½ï¿½+1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»ï¿½ï¿½ ==========
         for(uint8_t i = start_pos_led2; i < end_pos_led2; i++)
         {
             uint8_t red_val = 255 * userVar.brightness / 100;
@@ -1583,7 +1643,7 @@ void LedEffect5()
             LED_DATA_2[i * 3 + 2] = 0;
         }
 
-        // ========== ÒôÀÖ¼ÓËÙÂß¼­ ==========
+        // ========== ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ ==========
         if(userVar.if_music_play)
         {
             if(!if_accelerate_led2 && IsTimeOut(&led_switch_timer1))
@@ -1648,12 +1708,12 @@ void LedEffect6()
         color_contral_param6 = 0;
         color_contral_param7 = 0;
 
-        // ·åÖµ±£³Ö±äÁ¿³õÊ¼»¯
+        // ï¿½ï¿½Öµï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
         peak_hold_value_led2 = 0;
         peak_hold_value_led3 = 0;
         peak_decay_timer = 0;
 
-        // ÒôÀÖ¼ÓËÙ±äÁ¿³õÊ¼»¯
+        // ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½Ù±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
         if_accelerate_led2 = FALSE;
         accelerate_counter_led2 = 0;
         volume_strength_value = 0;
@@ -1668,7 +1728,7 @@ void LedEffect6()
     {
         ClearLedDataAll();
 
-        // LED3 Ê¹ÓÃ£ºÒôÀÖÒôÁ¿
+        // LED3 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         uint8_t volume_level_led3 = 0;
         if(userVar.if_music_play)
         {
@@ -1682,7 +1742,7 @@ void LedEffect6()
             volume_level_led3 = 0;
         }
 
-        // LED2 Ê¹ÓÃ£ºÂó¿Ë·çÒôÁ¿£¨ºÍÒôÀÖ²»Ò»Ñù£©
+        // LED2 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½Ò»ï¿½ï¿½ï¿½ï¿½
         uint8_t volume_level_led2 = 0;
         if(userVar.if_music_play)
         {
@@ -1696,19 +1756,19 @@ void LedEffect6()
             volume_level_led2 = 0;
         }
 
-        // ¹Ì¶¨µãÁÁ 2 ¸ñµÆÖé ¡ª¡ª LED3 Ê¹ÓÃ×Ô¼ºÒôÁ¿
+        // ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½ï¿½ 2 ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ LED3 Ê¹ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½
         int16_t light_len = 2;
         int16_t end_pos = volume_level_led3;
         int16_t start_pos = end_pos - light_len;
         if(start_pos < 0) start_pos = 0;
 
-        // LED2 Ê¹ÓÃ×Ô¼ºÒôÁ¿ + Æ«ÒÆ
+        // LED2 Ê¹ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ + Æ«ï¿½ï¿½
         int16_t end_pos_led2 = volume_level_led2 + 1;
         int16_t start_pos_led2 = (volume_level_led2 - light_len) + 1;
         if(end_pos_led2 > 48) end_pos_led2 = 48;
         if(start_pos_led2 < 0) start_pos_led2 = 0;
 
-        // ========== µãÁÁ LED_DATA_3 ==========
+        // ========== ï¿½ï¿½ï¿½ï¿½ LED_DATA_3 ==========
         for(uint8_t i = start_pos; i < end_pos; i++)
         {
             uint8_t green_val = 255 * userVar.brightness / 100;
@@ -1717,7 +1777,7 @@ void LedEffect6()
             LED_DATA_3[i * 3 + 2] = 0;
         }
 
-        // ========== µãÁÁ LED_DATA_2 ==========
+        // ========== ï¿½ï¿½ï¿½ï¿½ LED_DATA_2 ==========
         for(uint8_t i = start_pos_led2; i < end_pos_led2; i++)
         {
             uint8_t green_val = 255 * userVar.brightness / 100;
@@ -1726,7 +1786,7 @@ void LedEffect6()
             LED_DATA_2[i * 3 + 2] = 0;
         }
 
-        // ====================== LED3 ·åÖµ
+        // ====================== LED3 ï¿½ï¿½Öµ
         if(volume_level_led3 > peak_hold_value_led1_3)
         {
             peak_hold_value_led1_3 = volume_level_led3;
@@ -1743,7 +1803,7 @@ void LedEffect6()
             }
         }
 
-        // ======================LED2 ·åÖµ ======================
+        // ======================LED2 ï¿½ï¿½Öµ ======================
         if(volume_level_led2 > peak_hold_value_led1_2)
         {
             peak_hold_value_led1_2 = volume_level_led2;
@@ -1760,7 +1820,7 @@ void LedEffect6()
             }
         }
 
-        // ========== ·åÖµÐ¡»ÆµãÏÔÊ¾ ==========
+        // ========== ï¿½ï¿½ÖµÐ¡ï¿½Æµï¿½ï¿½ï¿½Ê¾ ==========
         if(peak_hold_value_led1_3 > 0 && peak_hold_value_led1_3 <= 48)
         {
             uint8_t peak_idx = peak_hold_value_led1_3 - 1;
@@ -1781,7 +1841,7 @@ void LedEffect6()
             LED_DATA_2[peak_idx * 3 + 2] = 0;
         }
 
-        // ========== ÒôÀÖ¼ÓËÙÂß¼­ ==========
+        // ========== ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ ==========
         if(userVar.if_music_play)
         {
             if(!if_accelerate_led2 && IsTimeOut(&led_switch_timer1))
@@ -1868,7 +1928,7 @@ void LedEffect7()
 		if_refresh_led_data = 0xFF;
 		ClearLedDataAll();
 
-		// ====================== LED3 Ê¹ÓÃ ÒôÀÖÒôÁ¿ MUSIC ======================
+		// ====================== LED3 Ê¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ MUSIC ======================
 		uint8_t volume_level_led3 = 0;
 		if(userVar.if_music_play)
 		{
@@ -1877,7 +1937,7 @@ void LedEffect7()
 			volume_level_led3 = vol;
 		}
 
-		// ====================== LED2 Ê¹ÓÃ Âó¿Ë·çÒôÁ¿ MIC£¨²»Í¬²½£©======================
+		// ====================== LED2 Ê¹ï¿½ï¿½ ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ MICï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½======================
 		uint8_t volume_level_led2 = 0;
 		if(userVar.if_music_play)
 		{
@@ -1886,34 +1946,34 @@ void LedEffect7()
 			volume_level_led2 = vol;
 		}
 
-		// ÖÐÐÄ 24¡¢25 ºÅµÆ
+		// ï¿½ï¿½ï¿½ï¿½ 24ï¿½ï¿½25 ï¿½Åµï¿½
 		uint8_t center_left  = 23;
 		uint8_t center_right = 24;
 
-		// LED3 À©É¢·¶Î§£¨ÒôÀÖ£©
+		// LED3 ï¿½ï¿½É¢ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½
 		int16_t expand_led3 = (volume_level_led3 * 23) / 48;
 		int16_t start_led3 = center_left - expand_led3;
 		int16_t end_led3   = center_right + expand_led3;
 		if(start_led3 < 0)  start_led3 = 0;
 		if(end_led3 >= 48)  end_led3 = 47;
 
-		// LED2 À©É¢·¶Î§£¨Âó¿Ë·ç£¬¶ÀÁ¢£©
+		// LED2 ï¿½ï¿½É¢ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½Ë·ç£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		int16_t expand_led2 = (volume_level_led2 * 23) / 48;
 		int16_t start_led2 = center_left - expand_led2;
 		int16_t end_led2   = center_right + expand_led2;
 		if(start_led2 < 0)  start_led2 = 0;
 		if(end_led2 >= 48)  end_led2 = 47;
 
-		// ÑÕÉ«½¥±ä£¨×Ô¶¯Á÷¶¯£©
+		// ï¿½ï¿½É«ï¿½ï¿½ï¿½ä£¨ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		static uint8_t color_flow = 0;
 		color_flow += 3;
 
-		// ====================== µãÁÁµÆ´ø ======================
+		// ====================== ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ ======================
 		for (int16_t i = 0; i < 48; i++)
 		{
 			uint8_t r = 0, g = 0, b = 0;
 
-			// ====================== LED3 Ê¹ÓÃ×Ô¼ºµÄ·¶Î§ ======================
+			// ====================== LED3 Ê¹ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ä·ï¿½Î§ ======================
 			if(i >= start_led3 && i <= end_led3)
 			{
 				uint8_t color = color_flow + i*5;
@@ -1941,12 +2001,12 @@ void LedEffect7()
 				g = g * userVar.brightness / 100;
 				b = b * userVar.brightness / 100;
 			}
-			// Ð´Èë LED3
+			// Ð´ï¿½ï¿½ LED3
 			LED_DATA_3[i*3+0] = g;
 			LED_DATA_3[i*3+1] = r;
 			LED_DATA_3[i*3+2] = b;
 
-			// ====================== LED2 Ê¹ÓÃ×Ô¼ºµÄ·¶Î§£¨¶ÀÁ¢²»Í¬²½£©======================
+			// ====================== LED2 Ê¹ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ä·ï¿½Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½======================
 			r = 0; g = 0; b = 0;
 			if(i >= start_led2 && i <= end_led2)
 			{
@@ -1975,7 +2035,7 @@ void LedEffect7()
 				g = g * userVar.brightness / 100;
 				b = b * userVar.brightness / 100;
 			}
-			// Ð´Èë LED2
+			// Ð´ï¿½ï¿½ LED2
 			LED_DATA_2[i*3+0] = g;
 			LED_DATA_2[i*3+1] = r;
 			LED_DATA_2[i*3+2] = b;
@@ -1985,7 +2045,7 @@ void LedEffect7()
 	}
 }
 
-// ·åÖµ¶ÀÁ¢±äÁ¿£¨LED2¡¢LED3 ·Ö¿ª£¬²»Í¬²½£©
+// ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½LED2ï¿½ï¿½LED3 ï¿½Ö¿ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½
 static uint8_t peak_left_led2  = 23;
 static uint8_t peak_right_led2 = 24;
 static uint8_t peak_left_led3  = 23;
@@ -2014,7 +2074,7 @@ void LedEffect8()
 		color_contral_param6 = 0;
 		color_contral_param7 = 0;
 
-		// ·åÖµ³õÊ¼»¯
+		// ï¿½ï¿½Öµï¿½ï¿½Ê¼ï¿½ï¿½
 		peak_left_led2  = 23;
 		peak_right_led2 = 24;
 		peak_left_led3  = 23;
@@ -2032,7 +2092,7 @@ void LedEffect8()
 		if_refresh_led_data = 0xFF;
 		ClearLedDataAll();
 
-		// ====================== LED2 Ê¹ÓÃ£ºÒôÀÖÒôÁ¿ ======================
+		// ====================== LED2 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ======================
 		uint8_t volume_level = 0;
 		if(userVar.if_music_play)
 		{
@@ -2041,7 +2101,7 @@ void LedEffect8()
 			volume_level = vol;
 		}
 
-		// ====================== LED3 Ê¹ÓÃ£ºÂó¿Ë·çÒôÁ¿£¨¶ÀÁ¢²»Í¬²½£©======================
+		// ====================== LED3 Ê¹ï¿½Ã£ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½======================
 		uint8_t mic_volume_level = 0;
 		if(userVar.if_music_play)
 		{
@@ -2050,33 +2110,33 @@ void LedEffect8()
 			mic_volume_level = mic_vol;
 		}
 
-		// ÖÐÐÄ 24¡¢25 ºÅµÆ
+		// ï¿½ï¿½ï¿½ï¿½ 24ï¿½ï¿½25 ï¿½Åµï¿½
 		uint8_t center_left  = 23;
 		uint8_t center_right = 24;
 
-		// LED2 À©É¢·¶Î§£¨ÒôÀÖ£©
+		// LED2 ï¿½ï¿½É¢ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½
 		int16_t expand = (volume_level * 23) / 48;
 		int16_t start = center_left - expand;
 		int16_t end   = center_right + expand;
 		if(start < 0)  start = 0;
 		if(end >= 48)  end = 47;
 
-		// LED3 À©É¢·¶Î§£¨Âó¿Ë·ç£©
+		// LED3 ï¿½ï¿½É¢ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½Ë·ç£©
 		int16_t mic_expand = (mic_volume_level * 23) / 48;
 		int16_t mic_start = center_left - mic_expand;
 		int16_t mic_end   = center_right + mic_expand;
 		if(mic_start < 0)  mic_start = 0;
 		if(mic_end >= 48)  mic_end = 47;
 
-		// LED2 ·åÖµ¸üÐÂ
+		// LED2 ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
 		if(start < peak_left_led2)  peak_left_led2 = start;
 		if(end   > peak_right_led2) peak_right_led2 = end;
 
-		// LED3 ·åÖµ¸üÐÂ
+		// LED3 ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
 		if(mic_start < peak_left_led3)  peak_left_led3 = mic_start;
 		if(mic_end   > peak_right_led3) peak_right_led3 = mic_end;
 
-		// ·åÖµË¥¼õ
+		// ï¿½ï¿½ÖµË¥ï¿½ï¿½
 		peak_decay++;
 		if(peak_decay >= 8)
 		{
@@ -2087,14 +2147,14 @@ void LedEffect8()
 			if(peak_right_led3 > 24) peak_right_led3--;
 		}
 
-		// ÑÕÉ«½¥±ä
+		// ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½
 		static uint8_t color_flow = 0;
 		color_flow += 3;
 
-		// ====================== LED2 ºÍ LED3 ¶ÀÁ¢ÁÁµÆ ======================
+		// ====================== LED2 ï¿½ï¿½ LED3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ======================
 		for (int16_t i = 0; i < 48; i++)
 		{
-			// ---------------- LED2 ÓÃÒôÀÖ·¶Î§ ----------------
+			// ---------------- LED2 ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½Î§ ----------------
 			uint8_t r = 0, g = 0, b = 0;
 			if(i >= start && i <= end)
 			{
@@ -2110,7 +2170,7 @@ void LedEffect8()
 			LED_DATA_2[i*3+1] = r;
 			LED_DATA_2[i*3+2] = b;
 
-			// ---------------- LED3 ÓÃÂó¿Ë·ç·¶Î§£¨ÍêÈ«²»Ò»Ñù£©----------------
+			// ---------------- LED3 ï¿½ï¿½ï¿½ï¿½Ë·ç·¶Î§ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½----------------
 			r = 0; g = 0; b = 0;
 			if(i >= mic_start && i <= mic_end)
 			{
@@ -2127,7 +2187,7 @@ void LedEffect8()
 			LED_DATA_3[i*3+2] = b;
 		}
 
-		// ·åÖµ°×¹â
+		// ï¿½ï¿½Öµï¿½×¹ï¿½
 		if(peak_left_led2 >=0 && peak_left_led2 <48)
 		{
 			LED_DATA_2[peak_left_led2*3 +0] = 0;
@@ -2533,7 +2593,7 @@ void CheckRgbLedEffect(void)
 
 	switch(userVar.led_mode)
 	{
-	//¿ª»ú
+	//ï¿½ï¿½ï¿½ï¿½
 	case LED_MODE_POWER_ON:
 		{
 			LedEffectPowerOn();
@@ -2696,7 +2756,7 @@ void LedEffectInit(void)
 }
 
 
-void LedEffectIODeInit(void)	//GPIOÊä³öµÍµçÆ½
+void LedEffectIODeInit(void)	//GPIOï¿½ï¿½ï¿½ï¿½Íµï¿½Æ½
 {		
 	DBG("--------LedEffectIODeInit--------\n");
 	
@@ -2741,14 +2801,14 @@ void LedEffectIODeInit(void)	//GPIOÊä³öµÍµçÆ½
 #endif
 }
 
-void LedEffectOff(uint8_t tws)	//ÇÐ»»µ½¹ØµÆ
+void LedEffectOff(uint8_t tws)	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Øµï¿½
 {		
 	if(userVar.led_mode == LED_MODE_POWER_OFF)
 	{
 		return;
 	}
 	
-	//¹Ø»úµÆÐ§µ÷ÓÃ£¬²»±£´æ£¬·Ç¹Ø»úµÆÐ§±£´æ
+	//ï¿½Ø»ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ£¬ï¿½Ç¹Ø»ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
 	if(userVar.led_mode > LED_MODE_POWER_ON && userVar.led_mode < LED_MODE_CLEAR_LED)
 	{
 		userVar.led_mode_bak = userVar.led_mode;
@@ -2800,15 +2860,15 @@ void LedEffectOff(uint8_t tws)	//ÇÐ»»µ½¹ØµÆ
 
 }
 
-void LedEffectNext(void)	//µÆÐ§ÇÐ»»
+void LedEffectNext(void)	//ï¿½ï¿½Ð§ï¿½Ð»ï¿½
 {
-	//¿ª¹Ø»úµÆÐ§ÖÐ£¨¹Ø»úÖÐ£©£¬²»ÄÜÇÐ»»
+	//ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½Ð§ï¿½Ð£ï¿½ï¿½Ø»ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½
 	if(userVar.led_mode == LED_MODE_POWER_OFF || userVar.led_mode == LED_MODE_POWER_ON || !IsTimeOut(&userVar.OtherLedTimer))
 	{
 		return;
 	}
 
-	//ÉÏÒ»¸öµÆÐ§ÊÇ·ñÊÇÓÐÐ§µÆÐ§
+	//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Ð§
 	if((userVar.led_mode > LED_MODE_POWER_ON) && (userVar.led_mode < LED_MODE_CLEAR_LED))
 	{
 		userVar.led_mode_bak = userVar.led_mode;
@@ -2818,14 +2878,14 @@ void LedEffectNext(void)	//µÆÐ§ÇÐ»»
 		userVar.led_mode_bak = userVar.led_mode_bak;
 	}
 	else
-	{	//ÉÏÒ»¸öµÆÐ§ÊÇÎÞÐ§µÆÐ§£¬Ä¬ÈÏ±£´æµÚÒ»¸öµÆÐ§
+	{	//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Ð§ï¿½ï¿½Ä¬ï¿½Ï±ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð§
 		userVar.led_mode_bak = 1;//userVar.led_mode;
 	}
 
-	//Ä¬ÈÏÇÐÏÂÒ»¸öµÆÐ§
+	//Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð§
 	++userVar.led_mode;
 
-	//ÇÐ»»ºóÊÇ·ñÎªÓÐÐ§µÆÐ§
+	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½Ð§ï¿½ï¿½Ð§
 	if((userVar.led_mode <= LED_MODE_POWER_ON) ||  (userVar.led_mode > LED_MODE_CLEAR_LED))
 	{
 		userVar.led_mode = LED_MODE_CHANGE1;
@@ -2843,7 +2903,7 @@ void LedEffectNext(void)	//µÆÐ§ÇÐ»»
 
 	//led_param_init();
 
-	//µÆÐ§³õÊ¼»¯±êÖ¾
+	//ï¿½ï¿½Ð§ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ö¾
 	led_exchange_flag 	= TRUE;
 	led_exchange_flag1 	= TRUE;
 	led_exchange_flag2 	= TRUE;
@@ -2854,9 +2914,9 @@ void LedEffectNext(void)	//µÆÐ§ÇÐ»»
 	#endif
 }
 
-void LedEffectSwitch(LED_MODE led_mode, uint8_t display, uint8_t tws)//Ñ¡ÔñÇÐ»»
+void LedEffectSwitch(LED_MODE led_mode, uint8_t display, uint8_t tws)//Ñ¡ï¿½ï¿½ï¿½Ð»ï¿½
 {
-	//¿ª¹Ø»úµÆÐ§ÖÐ£¨¹Ø»úÖÐ£©£¬²»ÄÜÇÐ»»
+	//ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½Ð§ï¿½Ð£ï¿½ï¿½Ø»ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½
 	if(userVar.led_mode == LED_MODE_POWER_OFF)
 	{
 		return;
@@ -2866,7 +2926,7 @@ void LedEffectSwitch(LED_MODE led_mode, uint8_t display, uint8_t tws)//Ñ¡ÔñÇÐ»»
 		led_mode = userVar.led_mode_bak;
 	}
 
-	//ÉÏÒ»¸öµÆÐ§ÊÇ·ñÊÇÓÐÐ§µÆÐ§
+	//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Ð§
 	if((userVar.led_mode > LED_MODE_POWER_ON) && (userVar.led_mode < LED_MODE_CLEAR_LED))
 	{
 		userVar.led_mode_bak = userVar.led_mode;
@@ -2876,25 +2936,25 @@ void LedEffectSwitch(LED_MODE led_mode, uint8_t display, uint8_t tws)//Ñ¡ÔñÇÐ»»
 		userVar.led_mode_bak = userVar.led_mode_bak;
 	}
 	else
-	{	//ÉÏÒ»¸öµÆÐ§ÊÇÎÞÐ§µÆÐ§£¬Ä¬ÈÏ±£´æµÚÒ»¸öµÆÐ§
+	{	//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Ð§ï¿½ï¿½Ä¬ï¿½Ï±ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð§
 		userVar.led_mode_bak = 1;//userVar.led_mode;
 	}
 	
-	//ÇÐ»»µÄµÆÐ§ÊÇ·ñÎªÓÐÐ§µÆÐ§
+	//ï¿½Ð»ï¿½ï¿½Äµï¿½Ð§ï¿½Ç·ï¿½Îªï¿½ï¿½Ð§ï¿½ï¿½Ð§
 	if((led_mode > LED_MODE_POWER_ON) && (led_mode <= LED_MODE_CLEAR_LED))
 	{
 		userVar.led_mode = led_mode;
 	}
 	else if(led_mode == LED_MODE_POWER_OFF)
-	{	//ÇÐ»»µ½¹Ø»úµÆÐ§
+	{	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½Ð§
 		userVar.led_mode = LED_MODE_POWER_OFF;
 	}
 	else if(led_mode == LED_MODE_POWER_ON && GetSystemMode() == ModeIdle)
-	{	//ÇÐ»»µ½¹Ø»úµÆÐ§
+	{	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½Ð§
 		userVar.led_mode = LED_MODE_POWER_ON;
 	}
 	else
-	{	//ÇÐ»»µ½ÎÞÐ§µÆÐ§£¬Ä¬ÈÏÇÐ»»µ½µÚÒ»¸öµÆÐ§
+	{	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Ð§ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð§
 		userVar.led_mode = 1;//LED_MODE_CHANGE1
 	}
 	
@@ -2916,7 +2976,7 @@ void LedEffectSwitch(LED_MODE led_mode, uint8_t display, uint8_t tws)//Ñ¡ÔñÇÐ»»
 
 	led_param_init();
 	
-	//µÆÐ§³õÊ¼»¯±êÖ¾
+	//ï¿½ï¿½Ð§ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ö¾
 	led_exchange_flag 	= TRUE;
 	led_exchange_flag1 	= TRUE;
 	led_exchange_flag2 	= TRUE;
@@ -2927,13 +2987,13 @@ void LedEffectSwitch(LED_MODE led_mode, uint8_t display, uint8_t tws)//Ñ¡ÔñÇÐ»»
 	#endif
 }
 
-void LedEffectSwitchOther(LED_TYPE led_mode)	//ÇÐ»»µ½Ä³Ð©Ö¸Ê¾µÆ
+void LedEffectSwitchOther(LED_TYPE led_mode)	//ï¿½Ð»ï¿½ï¿½ï¿½Ä³Ð©Ö¸Ê¾ï¿½ï¿½
 {
 	if(led_mode <= 0) return;
 
 	userVar.OtherLedFlag = led_mode;
 	if(userVar.OtherLedFlag == MUSIC_VOL_TYPE)
-		TimeOutSet(&userVar.OtherLedTimer, 2000);		//Ê±¼äÎªµÆÐ§Ê±¼ä
+		TimeOutSet(&userVar.OtherLedTimer, 2000);		//Ê±ï¿½ï¿½Îªï¿½ï¿½Ð§Ê±ï¿½ï¿½
 	else if(userVar.OtherLedFlag == BT_CONNECTED_TYPE)
 		TimeOutSet(&userVar.OtherLedTimer, 6000);
 	else if(userVar.OtherLedFlag == LED_BRIGHTNESS_TYPE)
@@ -2944,13 +3004,13 @@ void LedEffectSwitchOther(LED_TYPE led_mode)	//ÇÐ»»µ½Ä³Ð©Ö¸Ê¾µÆ
 }
 
 /**
- * @brief     ×öÊý¾Ý×ª»»
+ * @brief     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
  *
- * @param[in] *src  Ô´Êý¾Ý´æ·ÅÇø
- * @param[in] *dst  ×ª»»Íê³ÉÊý¾Ý´æ·ÅÇø
- * @param[in] num   µÆÖé¸öÊý
+ * @param[in] *src  Ô´ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½ï¿½
+ * @param[in] *dst  ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½ï¿½
+ * @param[in] num   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *
- * @return    ÎÞ
+ * @return    ï¿½ï¿½
  */
 static void Data_Conversion(uint8_t *src,uint8_t *dst,uint16_t num)
 {
@@ -2977,8 +3037,8 @@ static void Data_Conversion(uint8_t *src,uint8_t *dst,uint16_t num)
 }
 
 /**
- * @brief     Ö÷ÒªÊÇTIMERÊä³öPWM£¬Ã¿Ò»¸öPWMÖÜÆÚÍê³Éºó»á´¥·¢DMAÇëÇó£¬
- * 			     Í¨¹ýDMA¸üÐÂPWMµÄÕ¼¿Õ±È
+ * @brief     ï¿½ï¿½Òªï¿½ï¿½TIMERï¿½ï¿½ï¿½PWMï¿½ï¿½Ã¿Ò»ï¿½ï¿½PWMï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½á´¥ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½
+ * 			     Í¨ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½PWMï¿½ï¿½Õ¼ï¿½Õ±ï¿½
  */
 static void pwm7_led_Init(void)
 {
@@ -2994,7 +3054,7 @@ static void pwm7_led_Init(void)
 	printf("[pwm_led_Init]	TIM7_B4\n");
 	#endif
 	
-	/**********************DMAÅäÖÃ**************************/
+	/**********************DMAï¿½ï¿½ï¿½ï¿½**************************/
 	DMA_CONFIG	  DMAParam;
 	DMAParam.Dir   				= DMA_CHANNEL_DIR_MEM2PERI;
 	DMAParam.Mode  				= DMA_BLOCK_MODE;//DMA_BLOCK_MODE;
@@ -3002,23 +3062,23 @@ static void pwm7_led_Init(void)
 	DMAParam.SrcAddress 		= (uint32_t)LedBufA;
 	DMAParam.SrcAddrIncremental = DMA_SRC_AINCR_SRC_WIDTH;
 
-	DMAParam.DstAddress 		= 0x4002E024;// Õ¼¿Õ±È¼Ä´æÆ÷ 0x4002E024
+	DMAParam.DstAddress 		= 0x4002E024;// Õ¼ï¿½Õ±È¼Ä´ï¿½ï¿½ï¿½ 0x4002E024
 	DMAParam.DataWidth 			= DMA_DWIDTH_BYTE;
 	DMAParam.DstAddrIncremental = DMA_DST_AINCR_NO;
 	DMAParam.BufferLen			= BUF_LEN;
 	
 	DMA_TimerConfig(PERIPHERAL_ID_TIMER7, &DMAParam);
 	DMA_BlockBufSet(PERIPHERAL_ID_TIMER7, LedBufA, BUF_LEN);	
-	DMA_InterruptFlagClear(PERIPHERAL_ID_TIMER7, DMA_DONE_INT);//Çå³ýDMA´«ÊäÍê³ÉÖÐ¶Ï
+	DMA_InterruptFlagClear(PERIPHERAL_ID_TIMER7, DMA_DONE_INT);//ï¿½ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 	DMA_ChannelEnable(PERIPHERAL_ID_TIMER7);
 	
-/**********************PWMÅäÖÃ**************************/
+/**********************PWMï¿½ï¿½ï¿½ï¿½**************************/
 	
 	PWM_StructInit	PWMParam;
 	PWMParam.CounterMode			= PWM_COUNTER_MODE_UP;
 	PWMParam.OutputType 			= PWM_OUTPUT_SINGLE_1;
 	PWMParam.DMAReqEnable			= PWM_REQ_DMA_MODE;
-	PWMParam.FreqDiv				= LED_T; //120MÏµÍ³ÆµÂÊÏÂ 12000 = 100us
+	PWMParam.FreqDiv				= LED_T; //120MÏµÍ³Æµï¿½ï¿½ï¿½ï¿½ 12000 = 100us
 	PWMParam.Duty					= 0;
 	//GPIO Config
 	PWM_GpioConfig(TIMER7_PWM_A3_A5_A20_B4, PWM7_PIN_SEL, PWM_IO_MODE_OUT);
@@ -3047,7 +3107,7 @@ static void pwm6_led_Init(void)
 	printf("[pwm_led_Init]	TIM6_A28\n");
 	#endif
 
-	/**********************DMAÅäÖÃ**************************/
+	/**********************DMAï¿½ï¿½ï¿½ï¿½**************************/
 	DMA_CONFIG	  DMAParam;
 
 	DMAParam.Dir   				= DMA_CHANNEL_DIR_MEM2PERI;
@@ -3056,23 +3116,23 @@ static void pwm6_led_Init(void)
 	DMAParam.SrcAddress 		= (uint32_t)LedBufC;
 	DMAParam.SrcAddrIncremental = DMA_SRC_AINCR_SRC_WIDTH;
 
-	DMAParam.DstAddress 		= 0x4002C824;// Õ¼¿Õ±È¼Ä´æÆ÷
+	DMAParam.DstAddress 		= 0x4002C824;// Õ¼ï¿½Õ±È¼Ä´ï¿½ï¿½ï¿½
 	DMAParam.DataWidth 			= DMA_DWIDTH_BYTE;
 	DMAParam.DstAddrIncremental = DMA_DST_AINCR_NO;
 	DMAParam.BufferLen			= BUF_LEN1;
 
 	DMA_TimerConfig(PERIPHERAL_ID_TIMER6, &DMAParam);
 	DMA_BlockBufSet(PERIPHERAL_ID_TIMER6, LedBufC, BUF_LEN1); 
-	DMA_InterruptFlagClear(PERIPHERAL_ID_TIMER6, DMA_DONE_INT);//Çå³ýDMA´«ÊäÍê³ÉÖÐ¶Ï
+	DMA_InterruptFlagClear(PERIPHERAL_ID_TIMER6, DMA_DONE_INT);//ï¿½ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 	DMA_ChannelEnable(PERIPHERAL_ID_TIMER6);
 
-/**********************PWMÅäÖÃ**************************/
+/**********************PWMï¿½ï¿½ï¿½ï¿½**************************/
 	PWM_StructInit	PWMParam;
 
 	PWMParam.CounterMode			= PWM_COUNTER_MODE_UP;
 	PWMParam.OutputType 			= PWM_OUTPUT_SINGLE_1;
 	PWMParam.DMAReqEnable			= PWM_REQ_DMA_MODE;
-	PWMParam.FreqDiv				= LED_T; //120MÏµÍ³ÆµÂÊÏÂ 12000 = 1.25us
+	PWMParam.FreqDiv				= LED_T; //120MÏµÍ³Æµï¿½ï¿½ï¿½ï¿½ 12000 = 1.25us
 	PWMParam.Duty					= 0;
 	//GPIO Config
 	PWM_GpioConfig(TIMER6_PWM_A1_A9_A10_A23_A24_A28, PWM6_PIN_SEL, PWM_IO_MODE_OUT);
@@ -3099,7 +3159,7 @@ static void pwm5_led_Init(void)
 	printf("[pwm_led_Init]	TIM5_A24\n");
 	#endif
 	
-	/**********************DMAÅäÖÃ**************************/
+	/**********************DMAï¿½ï¿½ï¿½ï¿½**************************/
 	DMA_CONFIG	  DMAParam;
 	DMAParam.Dir   				= DMA_CHANNEL_DIR_MEM2PERI;
 	DMAParam.Mode  				= DMA_BLOCK_MODE;//DMA_BLOCK_MODE;
@@ -3107,23 +3167,23 @@ static void pwm5_led_Init(void)
 	DMAParam.SrcAddress 		= (uint32_t)LedBufE;
 	DMAParam.SrcAddrIncremental = DMA_SRC_AINCR_SRC_WIDTH;
 
-	DMAParam.DstAddress 		= 0x4002C024;// Õ¼¿Õ±È¼Ä´æÆ÷
+	DMAParam.DstAddress 		= 0x4002C024;// Õ¼ï¿½Õ±È¼Ä´ï¿½ï¿½ï¿½
 	DMAParam.DataWidth 			= DMA_DWIDTH_BYTE;
 	DMAParam.DstAddrIncremental = DMA_DST_AINCR_NO;
 	DMAParam.BufferLen			= BUF_LEN2;
 
 	DMA_TimerConfig(PERIPHERAL_ID_TIMER5, &DMAParam);
 	DMA_BlockBufSet(PERIPHERAL_ID_TIMER5, LedBufE, BUF_LEN2); 
-	DMA_InterruptFlagClear(PERIPHERAL_ID_TIMER5, DMA_DONE_INT);//Çå³ýDMA´«ÊäÍê³ÉÖÐ¶Ï
+	DMA_InterruptFlagClear(PERIPHERAL_ID_TIMER5, DMA_DONE_INT);//ï¿½ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 	DMA_ChannelEnable(PERIPHERAL_ID_TIMER5);
 
-/**********************PWMÅäÖÃ**************************/
+/**********************PWMï¿½ï¿½ï¿½ï¿½**************************/
 	PWM_StructInit	PWMParam;
 
 	PWMParam.CounterMode			= PWM_COUNTER_MODE_UP;
 	PWMParam.OutputType 			= PWM_OUTPUT_SINGLE_1;
 	PWMParam.DMAReqEnable			= PWM_REQ_DMA_MODE;
-	PWMParam.FreqDiv				= LED_T; //120MÏµÍ³ÆµÂÊÏÂ 12000 = 100us
+	PWMParam.FreqDiv				= LED_T; //120MÏµÍ³Æµï¿½ï¿½ï¿½ï¿½ 12000 = 100us
 	PWMParam.Duty					= 0;
 	//GPIO Config
 	PWM_GpioConfig(TIMER5_PWM_A0_A7_A10_A22_A24, PWM5_PIN_SEL, PWM_IO_MODE_OUT);
@@ -3148,7 +3208,7 @@ static void pwm8_led_Init(void)
 	printf("[pwm_led_Init]	TIM8_B5\n");
 	#endif
 	
-	/**********************DMAÅäÖÃ**************************/
+	/**********************DMAï¿½ï¿½ï¿½ï¿½**************************/
 	DMA_CONFIG	  DMAParam;
 	DMAParam.Dir   				= DMA_CHANNEL_DIR_MEM2PERI;
 	DMAParam.Mode  				= DMA_BLOCK_MODE;//DMA_BLOCK_MODE;
@@ -3156,23 +3216,23 @@ static void pwm8_led_Init(void)
 	DMAParam.SrcAddress 		= (uint32_t)LedBufG;
 	DMAParam.SrcAddrIncremental = DMA_SRC_AINCR_SRC_WIDTH;
 
-	DMAParam.DstAddress 		= 0x4002E824;// Õ¼¿Õ±È¼Ä´æÆ÷
+	DMAParam.DstAddress 		= 0x4002E824;// Õ¼ï¿½Õ±È¼Ä´ï¿½ï¿½ï¿½
 	DMAParam.DataWidth 			= DMA_DWIDTH_BYTE;
 	DMAParam.DstAddrIncremental = DMA_DST_AINCR_NO;
 	DMAParam.BufferLen			= BUF_LEN3;
 
 	DMA_TimerConfig(PERIPHERAL_ID_TIMER8, &DMAParam);
 	DMA_BlockBufSet(PERIPHERAL_ID_TIMER8, LedBufG, BUF_LEN3); 
-	DMA_InterruptFlagClear(PERIPHERAL_ID_TIMER8, DMA_DONE_INT);//Çå³ýDMA´«ÊäÍê³ÉÖÐ¶Ï
+	DMA_InterruptFlagClear(PERIPHERAL_ID_TIMER8, DMA_DONE_INT);//ï¿½ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 	DMA_ChannelEnable(PERIPHERAL_ID_TIMER8);
 
-/**********************PWMÅäÖÃ**************************/
+/**********************PWMï¿½ï¿½ï¿½ï¿½**************************/
 	PWM_StructInit	PWMParam;
 
 	PWMParam.CounterMode			= PWM_COUNTER_MODE_UP;
 	PWMParam.OutputType 			= PWM_OUTPUT_SINGLE_1;
 	PWMParam.DMAReqEnable			= PWM_REQ_DMA_MODE;
-	PWMParam.FreqDiv				= LED_T; //120MÏµÍ³ÆµÂÊÏÂ 12000 = 100us
+	PWMParam.FreqDiv				= LED_T; //120MÏµÍ³Æµï¿½ï¿½ï¿½ï¿½ 12000 = 100us
 	PWMParam.Duty					= 0;
 	//GPIO Config
 	PWM_GpioConfig(TIMER8_PWM_A4_A6_A21_B5, PWM8_PIN_SEL, PWM_IO_MODE_OUT);
@@ -3196,11 +3256,11 @@ void pwm_led_Init(void)
 static void pwm7_led_ctrl(uint8_t *data_led)
 {
 #ifdef PWM7_LED
-	static uint8_t send_flag=0; //Êý¾ÝË¢ÆÁ·¢ËÍ×´Ì¬
-	static uint8_t state_flag=0;//Êý¾Ý×¼±¸×´Ì¬
+	static uint8_t send_flag=0; //ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	static uint8_t state_flag=0;//ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½×´Ì¬
 	uint16_t i=0,j=0;
 
-	if(state_flag==0)//×¼±¸ÏÂÒ»´ÎÏÔÊ¾Êý¾Ý
+	if(state_flag==0)//×¼ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 	{
 				
 		if(send_flag)
@@ -3240,11 +3300,11 @@ static void pwm7_led_ctrl(uint8_t *data_led)
 static void pwm6_led_ctrl(uint8_t *data_led)
 {
 #ifdef PWM6_LED
-	static uint8_t send_flag=0; //Êý¾ÝË¢ÆÁ·¢ËÍ×´Ì¬
-	static uint8_t state_flag=0;//Êý¾Ý×¼±¸×´Ì¬
+	static uint8_t send_flag=0; //ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	static uint8_t state_flag=0;//ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½×´Ì¬
 	uint16_t i=0,j=0;
 
-	if(state_flag==0)//×¼±¸ÏÂÒ»´ÎÏÔÊ¾Êý¾Ý
+	if(state_flag==0)//×¼ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 	{
 				
 		if(send_flag)
@@ -3284,11 +3344,11 @@ static void pwm6_led_ctrl(uint8_t *data_led)
 static void pwm5_led_ctrl(uint8_t *data_led)
 {
 #ifdef PWM5_LED
-	static uint8_t send_flag=0; //Êý¾ÝË¢ÆÁ·¢ËÍ×´Ì¬
-	static uint8_t state_flag=0;//Êý¾Ý×¼±¸×´Ì¬
+	static uint8_t send_flag=0; //ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	static uint8_t state_flag=0;//ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½×´Ì¬
 	uint16_t i=0,j=0;
 
-	if(state_flag==0)//×¼±¸ÏÂÒ»´ÎÏÔÊ¾Êý¾Ý
+	if(state_flag==0)//×¼ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 	{
 				
 		if(send_flag)
@@ -3328,11 +3388,11 @@ static void pwm5_led_ctrl(uint8_t *data_led)
 static void pwm8_led_ctrl(uint8_t *data_led)
 {
 #ifdef PWM8_LED
-	static uint8_t send_flag=0; //Êý¾ÝË¢ÆÁ·¢ËÍ×´Ì¬
-	static uint8_t state_flag=0;//Êý¾Ý×¼±¸×´Ì¬
+	static uint8_t send_flag=0; //ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	static uint8_t state_flag=0;//ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½×´Ì¬
 	uint16_t i=0,j=0;
 
-	if(state_flag==0)//×¼±¸ÏÂÒ»´ÎÏÔÊ¾Êý¾Ý
+	if(state_flag==0)//×¼ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 	{
 				
 		if(send_flag)
